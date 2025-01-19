@@ -138,7 +138,7 @@ class BookedSeatView extends StatelessWidget {
                 Row(
                   children: [
                     seatWithNameWidget('Selected', 2),
-                    seatWithNameWidget('Not Available', 1),
+                    seatWithNameWidget('Available', 1),
                   ],
                 ),
                Row(
