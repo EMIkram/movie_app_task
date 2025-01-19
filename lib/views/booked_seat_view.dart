@@ -79,7 +79,11 @@ class BookedSeatView extends StatelessWidget {
             ),
           ),
           SizedBox(height: 80,),
-          Cenimaseatingview(seatings: seatings, selectedBorders: false, allowSelection: true, onSeatSelected: (rowIndex, columnIndex){}),
+          Cenimaseatingview(seatings: seatings, selectedBorders: false,
+              allowSelection: true,
+            onSeatSelected: (rowIndex, columnIndex){},
+            onSeatUnSelected: (rowIndex, columnIndex){},
+          ),
           SizedBox(height: 150,),
           Row( mainAxisAlignment: MainAxisAlignment.end,
             children: [

@@ -8,12 +8,14 @@ class Cenimaseatingview extends StatefulWidget {
     required this.selectedBorders,
     required this.allowSelection,
     required this.onSeatSelected,
+    required this.onSeatUnSelected,
     super.key,
   });
 
   bool selectedBorders;
   List<List<int>> seatings;
   void Function(int, int) onSeatSelected;
+  void Function(int, int) onSeatUnSelected;
   final bool allowSelection;
 
   @override
@@ -78,6 +80,11 @@ class _CenimaseatingviewState extends State<Cenimaseatingview> {
                             widget.onSeatSelected.call(rowIndex, columnIndex);
                             setState(() {
                               widget.seatings[rowIndex][columnIndex] = 2;
+                            });
+                          } else if (seat == 2 && widget.allowSelection) {
+                            widget.onSeatUnSelected.call(rowIndex, columnIndex);
+                            setState(() {
+                              widget.seatings[rowIndex][columnIndex] = 1;
                             });
                           }
 
