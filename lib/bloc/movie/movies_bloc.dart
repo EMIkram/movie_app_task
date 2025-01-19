@@ -111,7 +111,8 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
   }
 
   void _searchFieldClear(SearchFieldClearEvent event,emit) async {
-    emit(SearchEnabledState(searchedGenre: searchedGenre, searchList: [], stillSearching: true));
+    // emit(SearchEnabledState(searchedGenre: searchedGenre, searchList: [], stillSearching: true));
+  searchList =[];
   }
 
 

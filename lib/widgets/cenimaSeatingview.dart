@@ -63,6 +63,7 @@ class _CenimaseatingviewState extends State<Cenimaseatingview> {
               List<int> row = rowEntry.value;
 
               return Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
                       width: 10,

@@ -47,6 +47,7 @@ class _SelectTicketScreenState extends State<SelectTicketScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
@@ -55,7 +56,7 @@ class _SelectTicketScreenState extends State<SelectTicketScreen> {
               width: double.maxFinite,
             ),
             Container(
-              color: ColorPalette.white_F6F6FA,
+              color: Colors.white,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -68,20 +69,24 @@ class _SelectTicketScreenState extends State<SelectTicketScreen> {
                     children: [
                       SizedBox(
                         width: MediaQuery.sizeOf(context).width-80,
-                        child: MyText(
-                          widget.movie.title!,
-                          fontSize: 22,
-                          fontWeight: FontWeight.w500,
-                          color: ColorPalette.black_2E2739,
+                        child: Center(
+                          child: MyText(
+                            widget.movie.title!,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w500,
+                            color: ColorPalette.black_2E2739,
+                          ),
                         ),
                       ),
-                      MyText(
-                        'In Theaters ' +
-                            DateFormat('MMMM dd,yyyy').format(DateTime.parse(
-                                widget.movie.releaseDate.toString())),
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: ColorPalette.blue_61C3F2,
+                      Center(
+                        child: MyText(
+                          'In Theaters ' +
+                              DateFormat('MMMM dd,yyyy').format(DateTime.parse(
+                                  widget.movie.releaseDate.toString())),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: ColorPalette.blue_61C3F2,
+                        ),
                       ),
                     ],
                   ),
@@ -95,7 +100,7 @@ class _SelectTicketScreenState extends State<SelectTicketScreen> {
             Expanded(
                 child: Container(
               width: double.maxFinite,
-              color: ColorPalette.light_grey_DBDBDF,
+              color: ColorPalette.white_F6F6FA,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
